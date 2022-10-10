@@ -1,19 +1,49 @@
-# Programa Top v__ -  Tiempo _______
+# Programa Top v25 -  Tiempo Completo
 
 ## Mentores 👩🏻‍🏫👨🏼‍🏫
-- [Nombre del mentor](profiles/mentor-principal.md)
+- [Cristian Moreno](profiles/mentor-principal.md)
 - Mentor 2
 - Mentor 3
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
-- Estudiante 1
-- Estudiante 2
-- Estudiante 3
-- ...
+- Daniel Monsalve Villegas
+- Yulany Munevar
+- Julian Gómez Mejía
+- Camilo Pimentel
+- Diana Carolina Quinche Velez
+- Laura Manuela Esmoris Rosato
+- Juan Camilo Orjuela
+- Juan Manuel Lorza Mendez
+- Juan Sebastian Muñoz Arias
+- Salomón Vásquez Castillo
 
 ## Como es un dia de estudio durante el programa TOP?
 
-### 8:30 am - 10:00 am:
+### 🌍 Fase Onboarding 
+
+#### 8:30 am - 10:00 am:
+Trabajo en parejas - Pair programming
+
+#### 10:00 am - 1:30 pm:
+Pueden ocurrir varias actividades en este rango de tiempo
+- Avanzar por tu cuenta en los temas disponibles en classroom
+- Terminar los retos o misiones que son asignados en clase
+- Resolver dudas con los mentores
+
+#### 01:00 pm - 2:30 pm
+Tiempo para almorzar
+
+#### 02:30 pm - 03:30 pm:
+Clase Magistral con mentor principal
+
+### 03:30 pm - 6:30 pm:
+Pueden ocurrir varias actividades en este rango de tiempo
+- Avanzar por tu cuenta en los temas disponibles en classroom
+- Terminar los retos o misiones que son asignados en clase
+- Resolver dudas con los mentores
+
+### 💼 Fase Laboral 
+#### 8:30 am - 10:00 am:
 Clase Magistral con mentor principal
 
 ### 10:00 am - 1:30 pm:
