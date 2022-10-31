@@ -2,24 +2,24 @@
 
 ## Mentores 👩🏻‍🏫👨🏼‍🏫
 - [Cristian Moreno](profiles/mentor-principal.md)
-- Mentor 2
+- [Cristian Buitrago](profiles/cristian-buitrago.md)
 - Mentor 3
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
-- Daniel Monsalve Villegas
-- Yulany Munevar
+- [Yulany Munevar](profile/yulany-munevar.md)
+- [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
 - Julian Gómez Mejía
 - Camilo Pimentel
 - Diana Carolina Quinche Velez
 - Laura Manuela Esmoris Rosato
-- Juan Camilo Orjuela
 - [Juan M. Lorza](profiles/juan-lorza.md)
+- [Juan Camilo Orjuela](profiles/juan-orjuela.md)
 - Juan Sebastian Muñoz Arias
 - Salomón Vásquez Castillo
 
 ## Como es un dia de estudio durante el programa TOP?
 
-### 🌍 Fase Onboarding 
+### 🌍 Fase Onboarding
 
 #### 8:30 am - 10:00 am:
 Trabajo en parejas - Pair programming
@@ -42,7 +42,7 @@ Pueden ocurrir varias actividades en este rango de tiempo
 - Terminar los retos o misiones que son asignados en clase
 - Resolver dudas con los mentores
 
-### 💼 Fase Laboral 
+### 💼 Fase Laboral
 #### 8:30 am - 10:00 am:
 Clase Magistral con mentor principal
 
@@ -100,7 +100,7 @@ Deberás presentar y aprobar las siguienes misiones:
 5. Proyecto Grupal.
 6. Proyecto Individual.
 
-Los lineamientos para los proyectos individuale y grupales son estos: 
+Los lineamientos para los proyectos individuale y grupales son estos:
 
 **El Proyecto Grupal debe tener:**
 
