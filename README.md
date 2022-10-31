@@ -6,8 +6,8 @@
 - Mentor 3
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
+- [Yulany Munevar](profile/yulany-munevar.md)
 - [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
-- Yulany Munevar
 - Julian Gómez Mejía
 - Camilo Pimentel
 - Diana Carolina Quinche Velez
