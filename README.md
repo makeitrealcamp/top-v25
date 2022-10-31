@@ -8,7 +8,7 @@
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
 - [Yulany Munevar](profiles/yulany-munevar.md)
 - [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
-- Julian Gómez Mejía
+- [Julian Gómez Mejía](profiles/julian-gomez.md)
 - [Camilo Pimentel](profiles/camilo-pimentel.md)
 - [Diana Carolina Quinche Velez](profiles/diana-quinche.md)
 - [Juan M. Lorza](profiles/juan-lorza.md)
