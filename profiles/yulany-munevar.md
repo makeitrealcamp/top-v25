@@ -1,6 +1,6 @@
 # Yulany Munévar
 
-Soy ingeniera de sonido y me gusta mucho la música, toco piano y guitarra . Tambien me gusta mucho el diseño sonoro a futuro me gustaria trabajar en el desarrollo de videojuegos y tambien en la parte sonora de los mismos. 
+Soy ingeniera de sonido y me gusta mucho la música, toco piano y guitarra . Tambien me gusta mucho el diseño sonoro en peliculas y series por ello a futuro me gustaria trabajar en el desarrollo de videojuegos y tambien en la parte sonora de los mismos. 
 
 ## Perfiles sociales
 
