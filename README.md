@@ -11,11 +11,10 @@
 - Julian Gómez Mejía
 - Camilo Pimentel
 - [Diana Carolina Quinche Velez](profiles/diana-quinche.md)
-- Laura Manuela Esmoris Rosato
 - [Juan M. Lorza](profiles/juan-lorza.md)
 - [Juan Camilo Orjuela](profiles/juan-orjuela.md)
 - [Juan Sebastian Muñoz Arias](profiles/sebastian-munoz.md)
-- Salomón Vásquez Castillo
+- [Salomón Vásquez Castillo](profiles/salomon-vasquez.md)
 
 ## Como es un dia de estudio durante el programa TOP?
 
