@@ -8,14 +8,13 @@
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
 - [Yulany Munevar](profiles/yulany-munevar.md)
 - [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
-- Julian Gómez Mejía
-- Camilo Pimentel
+- [Julian Gómez Mejía](profiles/julian-gomez.md)
+- [Camilo Pimentel](profiles/camilo-pimentel.md)
 - [Diana Carolina Quinche Velez](profiles/diana-quinche.md)
-- Laura Manuela Esmoris Rosato
 - [Juan M. Lorza](profiles/juan-lorza.md)
 - [Juan Camilo Orjuela](profiles/juan-orjuela.md)
-- Juan Sebastian Muñoz Arias
-- Salomón Vásquez Castillo
+- [Juan Sebastian Muñoz Arias](profiles/sebastian-munoz.md)
+- [Salomón Vásquez Castillo](profiles/salomon-vasquez.md)
 
 ## Como es un dia de estudio durante el programa TOP?
 
