@@ -6,7 +6,7 @@
 - Mentor 3
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
-- Daniel Monsalve Villegas
+- [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
 - Yulany Munevar
 - Julian Gómez Mejía
 - Camilo Pimentel
