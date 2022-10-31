@@ -12,8 +12,8 @@
 - Camilo Pimentel
 - Diana Carolina Quinche Velez
 - Laura Manuela Esmoris Rosato
+- [Juan M. Lorza](profiles/juan-lorza.md)
 - [Juan Camilo Orjuela](profiles/juan-orjuela.md)
-- Juan Manuel Lorza Mendez
 - Juan Sebastian Muñoz Arias
 - Salomón Vásquez Castillo
 
