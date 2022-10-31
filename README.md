@@ -7,7 +7,7 @@
 
 ## Estudiantes 👩🏻‍💻🧑🏼‍💻
 - Daniel Monsalve Villegas
-- Yulany Munevar
+- [Yulany Munevar](profile/yulany-munevar.md)
 - Julian Gómez Mejía
 - Camilo Pimentel
 - Diana Carolina Quinche Velez
