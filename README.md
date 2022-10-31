@@ -13,7 +13,7 @@
 - Diana Carolina Quinche Velez
 - Laura Manuela Esmoris Rosato
 - Juan Camilo Orjuela
-- Juan Manuel Lorza Mendez
+- [Juan M. Lorza](profiles/juan-lorza.md)
 - Juan Sebastian Muñoz Arias
 - Salomón Vásquez Castillo
 
