@@ -9,7 +9,7 @@
 - [Yulany Munevar](profile/yulany-munevar.md)
 - [Daniel Monsalve Villegas](profiles/daniel-monsalve.md)
 - Julian Gómez Mejía
-- Camilo Pimentel
+- [Camilo Pimentel](profiles/camilo-pimentel.md)
 - [Diana Carolina Quinche Velez](profiles/diana-quinche.md)
 - Laura Manuela Esmoris Rosato
 - [Juan M. Lorza](profiles/juan-lorza.md)
