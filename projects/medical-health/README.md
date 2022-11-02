@@ -4,7 +4,7 @@
 
 ## Descripción
 
-La aplicación le permite a los usuarios buscar y reservar alojamientos que publican los administradores del sistema. Los usuarios pueden buscar alojamientos por ciudad, fecha de entrada y fecha de salida. Los administradores pueden publicar alojamientos y ver las reservas que se han hecho.
+La aplicación le permite a los usuarios buscar y agendar citas medicas con un doctor en particular, ademas los usuarios pueden buscar doctores por especialidad, o disponibilidad en fecha. Los doctores pueden ver la informacion de las citas agendas ademas de poder aceptarlas, rechazarlas o aplazarlas para una proxima fecha.
 
 Puedes usar cualquier herramienta que te guste para ayudarte a completar el proyecto.
 
