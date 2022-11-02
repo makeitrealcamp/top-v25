@@ -3,6 +3,13 @@
 
 Es de recordar que estos pasos los van a realizar en equipo y tendra como resultado un proyecto que se entregara en el sprint __.
 
+## Lista de Proyectos
+
+- [Hotel Booking](./hotel-booking/)
+- [NFT Marketplace](./nft-marketplace/)
+- [Medical Health](./medical-health/)
+
+
 ## Repositorios del proyecto
 Crear 2 repositorios en GitHub con el nombre del proyecto, `frontend-nombre-proyecto` y `backend-nombre-proyecto`. Seguir estos pasos para cada uno de los repositorios.
 
