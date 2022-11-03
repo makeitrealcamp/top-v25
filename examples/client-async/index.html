@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Async</title>
+</head>
+<body>
+  <header>
+    <menu>
+      <a href="index.html">Home</a>
+      <a href="detail.html">Detail</a>
+    </menu>
+  </header>
+  <h1>Show Pokemons</h1>
+  <ul id="list-pokemon"></ul>
+  <button id="btn">Show Pokemons</button>
+
+  <script>
+    const btn = document.getElementById('btn');
+    const listPokemon = document.getElementById('list-pokemon');
+
+    let limit = 10;
+    let offset = 0;
+
+
+    function renderPokemon(pokemon) {
+      const li = document.createElement('li');
+      li.innerText = pokemon.name;
+      listPokemon.appendChild(li);
+    }
+
+    function getPokemonsPromise() {
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+
+      // TODO: code here to get pokemons using fetch and promise
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const { results } = data
+          results.forEach(pokemon => {
+            renderPokemon(pokemon)
+          });
+        })
+        .catch(console.error)
+
+      // Increase offset by 10
+      offset += 10;
+    }
+
+    async function getPokemonsAsync() {
+      const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
+
+      // TODO: code here to get pokemons using fetch and async/await
+      try {
+        const response = await fetch(url)
+        const data = await response.json()
+
+        const { results } = data
+        results.forEach(pokemon => {
+          renderPokemon(pokemon)
+        });
+      } catch (error) {
+        console.error(error)
+      }
+
+
+      // Increase offset by 10
+      offset += 10;
+    }
+
+    // add event listener to button with promise function
+    // btn.addEventListener('click', getPokemonsPromise);
+
+    // add event listener to button with async function
+    btn.addEventListener('click', getPokemonsAsync);
+  </script>
+</body>
+</html>

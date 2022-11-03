@@ -1,0 +1,18 @@
+const names = [
+  ' Daniel Monsalve Villegas',
+  'Yulany Munevar',
+  'Julian Gómez Mejía',
+  'Juan Manuel Lorza Mendez',
+  'Diana Carolina Quinche Velez',
+  'Salomón Vasquez Castillo',
+  'Camilo Pimentel',
+  'Juan Camilo Orjuela',
+  'Juan Sebastian Muñoz Arias',
+]
+
+function randomName() {
+  const random = Math.floor(Math.random() * names.length)
+  return names[random]
+}
+
+console.log(randomName())

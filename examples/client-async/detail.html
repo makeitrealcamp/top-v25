@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Async | Detail</title>
+</head>
+<body>
+  <header>
+    <menu>
+      <a href="index.html">Home</a>
+      <a href="detail.html">Detail</a>
+    </menu>
+  </header>
+
+  <h1>Show Characters</h1>
+  <div>
+    <button id="btn-rick"> Show Rick Sanchez </button>
+    <button id="btn-morty"> Show Morty Smith </button>
+    <button id="btn-summer"> Show Summer Smith </button>
+    <button id="btn-beth"> Show Beth Smith </button>
+    <button id="btn-jerry"> Show Jerry Smith </button>
+    <button id="btn-all" style="background-color: blueviolet; color: white;">
+      Show All Characters
+    </button>
+  </div>
+  <ul id="list-character" style="border: 1px dashed; padding: 10px;"></ul>
+
+  <script>
+    const btnRick = document.getElementById('btn-rick');
+    const btnMorty = document.getElementById('btn-morty');
+    const btnSummer = document.getElementById('btn-summer');
+    const btnBeth = document.getElementById('btn-beth');
+    const btnJerry = document.getElementById('btn-jerry');
+    const btnAll = document.getElementById('btn-all');
+    const listCharacter = document.getElementById('list-character');
+
+    function renderCharacter(character) {
+      const li = document.createElement('li');
+      li.innerText = character.name;
+      listCharacter.appendChild(li);
+    }
+
+    function getRickPromise() {
+      const url = 'https://rickandmortyapi.com/api/character/1';
+
+      getInfo(url)
+    }
+
+    function getMortyPromise() {
+      const url = 'https://rickandmortyapi.com/api/character/2';
+
+      getInfo(url)
+    }
+
+    function getSummerPromise() {
+      const url = 'https://rickandmortyapi.com/api/character/3';
+
+      getInfo(url)
+    }
+
+    function getBethPromise() {
+      const url = 'https://rickandmortyapi.com/api/character/4';
+
+      getInfo(url)
+    }
+
+    function getJerryPromise() {
+      const url = 'https://rickandmortyapi.com/api/character/5';
+
+      getInfo(url)
+    }
+
+    function getAllPromise() {
+      // Code here to get all characters using previous functions
+    }
+
+    btnRick.addEventListener('click', getRickPromise);
+    btnMorty.addEventListener('click', getMortyPromise);
+    btnSummer.addEventListener('click', getSummerPromise);
+    btnBeth.addEventListener('click', getBethPromise);
+    btnJerry.addEventListener('click', getJerryPromise);
+    btnAll.addEventListener('click', getAllPromise);
+
+    function getInfo(url) {
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          renderCharacter(data);
+        });
+    }
+
+
+  </script>
+</body>
+</html>
