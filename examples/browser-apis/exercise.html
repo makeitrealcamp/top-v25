@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <!-- copy link to leaflet style "https://unpkg.com/leaflet[arroba]1.9.2 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+    crossorigin=""/>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: blueviolet;
+      height: 70vh;
+      position: relative;
+      width: 100vw;
+    }
+
+    #map { height: 900px; width: 100vw; }
+
+    .overlay {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Full Excersise</h1>
+
+  <div>
+    <button id="btn-current">Current location</button>
+    <button id="btn-random">Random Locations</button>
+    <button id="btn-fetch">Fetch Locations</button>
+    <button id="btn-localstorage">LocalStorage Locations</button>
+  </div>
+
+  <div class="container">
+    <div id="map"></div>
+    <div class="overlay">
+      <h2>Loading ...</h2>
+    </div>
+  </div>
+  <!-- copy link to leaflet script "https://unpkg.com/leaflet[arroba]1.9.2 -->
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+    crossorigin=""></script>
+
+  <script type="module">
+    import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+
+    const btnCurrent = document.getElementById('btn-current');
+    const btnRandom = document.getElementById('btn-random');
+    const btnFetch = document.getElementById('btn-fetch');
+    const btnLocalStorage = document.getElementById('btn-localstorage');
+    const overlay = document.querySelector('.overlay');
+
+    const map = L.map('map').setView([0, 0], 1);
+    const layerGroup = L.layerGroup().addTo(map);
+
+    // Load and display the tile layer
+    function init() {
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+    }
+
+    // Get Current position and display a marker on the map
+    function getCurrentlocation() {
+      // TODO: Code here to get the current location
+      // 1. Request the current location from the browser using the Geolocation API.
+      // Note: You can use the getCurrentPosition() method of the Geolocation API.
+      // 2. Desctructure the latitude and longitude from the position object.
+      // 3. Create a marker using the latitude and longitude.
+      // Note: You can use the L.marker() method to create a marker. Like this: L.marker([lat, lng]).addTo(layerGroup);
+      // 4. Set the view of the map to the latitude and longitude.
+      // Note: You can use the setView() method of the map object. Like this: map.setView([lat, lng], 16);
+      // 5. Hide the overlay. You can use the style.display property to hide the overlay. Like this: overlay.style.display = 'none';
+
+
+    }
+
+    // Get random locations from faker
+    function getRandomLocations() {
+      const locations = Array.from({ length: 10 }, () => ({
+        latitude: faker.address.latitude(),
+        longitude: faker.address.longitude()
+      }));
+
+      return locations;
+    }
+
+    // Save locations to local storage
+    function saveLocationsToLocalStorage(locations = []) {
+      // TODO: Code here to save locations to local storage
+      // Remember to stringify the locations before saving
+
+
+    }
+
+    // Get locations from local storage
+    function getLocationsFromLocalStorage() {
+      // TODO: Code here to get locations from local storage.
+      // Remember to parse the JSON string to an array of objects
+      // Return an empty array if there are no locations in local storage
+      // The key is 'locations'
+
+
+      return [];
+    }
+
+    // Get locations from API
+    async function getFetchLocations() {
+      const url = 'https://jsonplaceholder.typicode.com/users';
+      try {
+        // TODO: Code here to fetch locations from API
+
+        const data = []
+
+        const locations = data.map(user => ({
+          latitude: user.address.geo.lat,
+          longitude: user.address.geo.lng
+        }));
+
+        return locations;
+      } catch (error) {
+        throw new Error(error);
+      }
+    }
+
+    // Add marker to the map
+    function addMarker(coords) {
+      const { latitude, longitude } = coords;
+      L.marker([latitude, longitude]).addTo(layerGroup);
+    }
+
+    // Event Handler to display current location
+    function currentLocationHandler() {
+      // remove all the markers in one go
+      layerGroup.clearLayers();
+
+      // display overlay
+      overlay.style.display = 'flex';
+
+      getCurrentlocation();
+    }
+
+    // Event Handler to display random locations
+    function randomLocationHandler(e) {
+      // remove all the markers in one go
+      layerGroup.clearLayers();
+
+      // TODO: Code here to display random locations
+      // 1. Get locations from getRandomLocations function
+      // 2. Save locations to local storage using saveLocationsToLocalStorage function
+      // 3. Display locations on the map, use addMarker function to add marker when looping through locations
+
+
+
+      // Center the map
+      map.setView([0, 0], 2);
+    }
+
+    // Event Handler to display locations from API
+    async function fetchLocationHandler(e) {
+      // remove all the markers in one go
+      layerGroup.clearLayers();
+
+      try {
+        // display overlay
+        overlay.style.display = 'flex';
+
+        // TODO: Code here to get locations from API
+        // 1. Get locations from getFetchLocations function
+        // 2. Display locations on the map, use addMarker function to add marker when looping through locations
+
+
+        // Center the map
+        map.setView([0, 0], 2);
+      } catch (error) {
+        throw new Error(error);
+      } finally {
+        // hide overlay
+        overlay.style.display = 'none';
+      }
+    }
+
+    // Event Handler to display locations from local storage
+    function localStorageLocationHandler(e) {
+      // remove all the markers in one go
+      layerGroup.clearLayers();
+
+      // TODO: Code here to display locations from local storage
+      // 1. Get locations from getLocationsFromLocalStorage function
+      // 2. Display locations on the map, use addMarker function to add marker when looping through locations
+
+
+      // Center the map
+      map.setView([0, 0], 2);
+    }
+
+
+    // Event Listeners
+    btnCurrent.addEventListener('click', currentLocationHandler);
+    btnRandom.addEventListener('click', randomLocationHandler);
+    btnFetch.addEventListener('click', fetchLocationHandler);
+    btnLocalStorage.addEventListener('click', localStorageLocationHandler);
+
+    // init map
+    init();
+  </script>
+</body>
+</html>

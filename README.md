@@ -16,6 +16,10 @@
 - [Juan Sebastian Muñoz Arias](profiles/sebastian-munoz.md)
 - [Salomón Vásquez Castillo](profiles/salomon-vasquez.md)
 
+## Clases 📚
+
+- [Lista de clases](classes.md)
+
 ## Como es un dia de estudio durante el programa TOP?
 
 ### 🌍 Fase Onboarding
