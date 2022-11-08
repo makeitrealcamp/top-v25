@@ -8,6 +8,20 @@ body {
   min-width: 100vw;
 }
 
+div {
+  &.info {
+    @include theme;
+  }
+
+  &.warning {
+    @include theme($colorTheme: yellow);
+  }
+
+  &.error {
+    @include theme($colorTheme: red);
+  }
+}
+
 .card {
   @include theme($secondary-color);
   border-radius: 5px;
