@@ -1,0 +1,52 @@
+@import 'colors';
+@import 'mixins';
+
+body {
+  background-color: $primary-color;
+  font-family: $primary-font;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.card {
+  @include theme($secondary-color);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+
+  &__title {
+    font-family: $secondary-font;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 1rem;
+    margin: 0;
+    font-style: italic;
+    padding-bottom: 10px;
+  }
+
+  &__button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    font-family: $primary-font;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+
+    &--buy {
+      background-color: darkorange;
+      color: #ffffff;
+    }
+
+    &:hover{
+      background-color: gold;
+      color: #ffffff;
+    }
+  }
+
+
+}
