@@ -1,37 +1,60 @@
 import { useState } from 'react'
 
+import TodoForm from './componets/TodoForm'
+import TodoList from './componets/TodoList'
+
 import './App.css'
 
+const randomTask = {
+  id: 1,
+  title: 'Insertar en la DB',
+  isCompleted: true
+}
+const randomTask2 = {
+  id: 2,
+  title: 'giT cOMMIT',
+  isCompleted: false
+}
+
 function App() {
-  const [count, setCount]  = useState(0)
-  const [name, setName] = useState('khriztianmoreno')
+  const [tasks, setTasks] = useState([randomTask, randomTask2])
 
-
-  const handleClick = () => {
-    setCount(count + 1)
+  const handleAddTask = (newTask) => {
+    setTasks(tasks.concat(newTask))
   }
 
-  const handleClickDecrement = () => {
-    setCount(count - 1)
+  const handleCleanDone = () => {
+    const newList = tasks.filter((item) => !item.isCompleted)
+
+    setTasks(newList)
   }
 
+  const handleEdit = (task) => {
+    const taskUpdated = tasks.map((item) => {
+      if (item.id === task.id) {
+        const taskUpdated = {
+          ...item,
+          isCompleted: !task.isDone
+        }
+
+        return taskUpdated
+      }
+
+      return item
+    })
+
+
+    setTasks(taskUpdated)
+  }
 
   return (
     <div className="App">
-      <div id="container">hola</div>
-      <h1>Counter: {count}</h1>
-      {
-        count === 5
-          ? <p>Hemos llegado a 5 clicks</p>
-          : <p>Aun no llegamos a 5</p>
-      }
-
-      <button onClick={handleClick}>
-        Increment
-      </button>
-      <button onClick={handleClickDecrement}>
-        Decreiment
-      </button>
+      <TodoForm handleAddTask={handleAddTask} />
+      <TodoList
+        listTask={tasks}
+        handleClear={handleCleanDone}
+        handleEdit={handleEdit}
+      />
     </div>
   )
 }
