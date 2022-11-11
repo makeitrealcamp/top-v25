@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Local Storage</title>
+</head>
+<body>
+  <h1>Local Storage Todo</h1>
+
+  <form id="todo-form">
+    <input type="text" id="todo-input" placeholder="Enter todo">
+    <button type="submit">Add</button>
+  </form>
+
+  <ul id="todo-list"></ul>
+
+  <script>
+    const todoForm = document.getElementById('todo-form');
+    const todoInput = document.getElementById('todo-input');
+    const todoList = document.getElementById('todo-list');
+
+    function submit(e) {
+      e.preventDefault();
+      const todo = todoInput.value;
+
+
+      if (todo) {
+        const todoItem = document.createElement('li');
+        todoItem.innerText = todo;
+        todoList.appendChild(todoItem);
+        todoInput.value = '';
+
+        // Add to local storage
+        // const todos = localStorage.getItem('todos');
+        // if (todos) {
+        //   const todosArray = JSON.parse(todos);
+        //   todosArray.push(todo);
+        //   localStorage.setItem('todos', JSON.stringify(todosArray));
+        // } else {
+        //   localStorage.setItem('todos', JSON.stringify([todo]));
+        // }
+
+        // Add to session storage
+        const todos = sessionStorage.getItem('todos');
+        if (todos) {
+          const todosArray = JSON.parse(todos);
+          todosArray.push(todo);
+          sessionStorage.setItem('todos', JSON.stringify(todosArray));
+        } else {
+          sessionStorage.setItem('todos', JSON.stringify([todo]));
+        }
+      }
+    }
+
+    function loadTodos() {
+      // const todos = localStorage.getItem('todos');
+      // if (todos) {
+      //   const todosArray = JSON.parse(todos);
+      //   todosArray.forEach(todo => {
+      //     const todoItem = document.createElement('li');
+      //     todoItem.innerText = todo;
+      //     todoList.appendChild(todoItem);
+      //   });
+      // }
+
+      const todos = sessionStorage.getItem('todos');
+      if (todos) {
+        const todosArray = JSON.parse(todos);
+        todosArray.forEach(todo => {
+          const todoItem = document.createElement('li');
+          todoItem.innerText = todo;
+          todoList.appendChild(todoItem);
+        });
+      }
+    }
+
+    todoForm.addEventListener('submit', submit);
+
+    loadTodos();
+  </script>
+</body>
+</html>

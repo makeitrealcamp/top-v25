@@ -1,0 +1,58 @@
+.card {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card--active {
+  border: 1px dashed rgb(14, 82, 226);
+}
+
+.card--disabled {
+  opacity: 0.5;
+  border: 1px dashed #ccc;
+  cursor: not-allowed;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__description {
+  margin: 0;
+}
+
+.card__button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card__button {
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.card__button--success {
+  background-color: rgb(85, 105, 237);
+  color: #ffffff;
+}
+
+.card__button--error {
+  background-color: rgb(255, 0, 0);
+}
+
+.card__button--warning {
+  background-color: rgb(255, 255, 0);
+}

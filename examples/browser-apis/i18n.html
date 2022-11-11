@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>i18N</title>
+</head>
+<body>
+  <h1>i18n - Internationalization</h1>
+
+  <p>
+    Currency: <span id="currency"></span>
+  </p>
+
+  <p>
+    Language: <span id="language"></span>
+  </p>
+
+  <p>
+    Number: <span id="number"></span>
+  </p>
+
+  <p>
+    Date: <span id="date"></span>
+  </p>
+
+  <script>
+    const currency = document.getElementById('currency');
+    const language = document.getElementById('language');
+    const number = document.getElementById('number');
+    const date = document.getElementById('date');
+
+    const lang = navigator.language;
+
+    const numberValue = 123456.789;
+    const dateValue = new Date();
+
+    const options = {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    };
+
+    const dateOptions = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+
+    currency.innerHTML = new Intl.NumberFormat(lang, options).format(numberValue);
+    language.innerHTML = lang;
+    number.innerHTML = new Intl.NumberFormat(lang).format(numberValue);
+    date.innerHTML = new Intl.DateTimeFormat(lang, dateOptions).format(dateValue);
+
+
+  </script>
+</body>
+</html>

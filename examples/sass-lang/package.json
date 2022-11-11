@@ -1,0 +1,16 @@
+{
+  "name": "sass-lang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch ./sass/style.scss ./styles/main.css",
+    "sass:build": "sass --style compressed ./sass/style.scss ./styles/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.0"
+  }
+}
