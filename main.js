@@ -13,24 +13,30 @@ const names = [
   'Salomon Vasquez'
 ]
 
-const createFolder = (name) => {
-  fs.mkdirSync(name);
+const randomName = () => {
+  return names[Math.floor(Math.random() * names.length)];
 }
 
-const createFile = (name, content) => {
-  fs.writeFileSync(name, content);
-}
+// const createFolder = (name) => {
+//   fs.mkdirSync(name);
+// }
 
-function main() {
-  const directory = path.join(__dirname, 'challenges/reto-album');
-  names.forEach(name => {
-    const folderName = name.toLowerCase().replace(' ', '_');
-    const folderPath = path.join(directory, folderName);
-    createFolder(folderPath);
+// const createFile = (name, content) => {
+//   fs.writeFileSync(name, content);
+// }
 
-    const filePath = path.join(folderPath, '.keep');
-    createFile(filePath, `Hola, soy ${name}`);
-  })
-}
+// function main() {
+//   const directory = path.join(__dirname, 'challenges/reto-album');
+//   names.forEach(name => {
+//     const folderName = name.toLowerCase().replace(' ', '_');
+//     const folderPath = path.join(directory, folderName);
+//     createFolder(folderPath);
 
-main();
+//     const filePath = path.join(folderPath, '.keep');
+//     createFile(filePath, `Hola, soy ${name}`);
+//   })
+// }
+
+// main();
+
+console.log(randomName());

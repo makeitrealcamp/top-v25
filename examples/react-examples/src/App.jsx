@@ -1,30 +1,37 @@
-import Hello from './componets/Hello'
-import Wrap from './componets/Wrap'
-
+import { useState } from 'react'
 
 import './App.css'
 
 function App() {
-  const saludo = "Hola Mundo"
-  const hobbies = ["Leer", "Cocinar", "Dormir"]
+  const [count, setCount]  = useState(0)
+  const [name, setName] = useState('khriztianmoreno')
 
-  const handleSubmit = (e) => {}
 
-  const handleChange = (e) => {}
+  const handleClick = () => {
+    setCount(count + 1)
+  }
 
-  const handleBlurValidate = (e) => {}
+  const handleClickDecrement = () => {
+    setCount(count - 1)
+  }
 
-  const handleClick = () => { alert('Hola mundo')}
 
   return (
     <div className="App">
-      <button onClick={handleClick}>
-        click me
-      </button>
+      <div id="container">hola</div>
+      <h1>Counter: {count}</h1>
+      {
+        count === 5
+          ? <p>Hemos llegado a 5 clicks</p>
+          : <p>Aun no llegamos a 5</p>
+      }
 
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} onBlur={handleBlurValidate} />
-      </form>
+      <button onClick={handleClick}>
+        Increment
+      </button>
+      <button onClick={handleClickDecrement}>
+        Decreiment
+      </button>
     </div>
   )
 }
