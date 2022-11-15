@@ -7,11 +7,14 @@ const List = ({ pokemons = [] }) => {
     <div>
       <h3>List of pokemons</h3>
       <ul className='list-card'>
-        {/* Your code here */}
-        <PokeItem />
-        <PokeItem />
-        <PokeItem />
-        <PokeItem />
+        {
+          pokemons.length > 0
+            ? pokemons.map(pokemon => {
+              return <PokeItem pokemon={pokemon} key={pokemon.id} />
+            })
+
+            : <li>No hay datos</li>
+        }
       </ul>
     </div>
   )
