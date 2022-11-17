@@ -7,12 +7,19 @@ function App() {
   const [result, setResult] = useState([])
 
   useEffect(() => {
-    console.log('useEffect')
-    fetch('https://rickandmortyapi.com/api/character')
-      .then(response => response.json())
-      .then(data => {
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://swapi.dev/api/people')
+        const data = await response.json()
         setResult(data.results)
-      })
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    fetchData()
+
   }, [])
 
 
@@ -22,11 +29,9 @@ function App() {
 
       <ul>
         {
-          result.map((item) => {
-            return (
-              <li key={item.id}>{item.name}</li>
-            )
-          })
+          result.length
+            ? result.map((item) => <li key={item.id}>{item.name}</li>)
+            : <li>loading...</li>
         }
       </ul>
 
