@@ -1,62 +1,40 @@
-import { useState } from 'react'
-
-import TodoForm from './componets/TodoForm'
-import TodoList from './componets/TodoList'
+import { useState, useEffect } from 'react'
 
 import './App.css'
 
-const randomTask = {
-  id: 1,
-  title: 'Insertar en la DB',
-  isCompleted: true
-}
-const randomTask2 = {
-  id: 2,
-  title: 'giT cOMMIT',
-  isCompleted: false
-}
-
 function App() {
-  const [tasks, setTasks] = useState([randomTask, randomTask2])
+  const [count, setCount] = useState(0)
+  const [result, setResult] = useState([])
 
-  const handleAddTask = (newTask) => {
-    setTasks(tasks.concat(newTask))
-  }
+  useEffect(() => {
+    console.log('useEffect')
+    fetch('https://rickandmortyapi.com/api/character')
+      .then(response => response.json())
+      .then(data => {
+        setResult(data.results)
+      })
+  }, [])
 
-  const handleCleanDone = () => {
-    const newList = tasks.filter((item) => !item.isCompleted)
-
-    setTasks(newList)
-  }
-
-  const handleEdit = (task) => {
-    const taskUpdated = tasks.map((item) => {
-      if (item.id === task.id) {
-        const taskUpdated = {
-          ...item,
-          isCompleted: !task.isDone
-        }
-
-        return taskUpdated
-      }
-
-      return item
-    })
-
-
-    setTasks(taskUpdated)
-  }
 
   return (
     <div className="App">
-      <TodoForm handleAddTask={handleAddTask} />
-      <TodoList
-        listTask={tasks}
-        handleClear={handleCleanDone}
-        handleEdit={handleEdit}
-      />
+      <h1>{count}</h1>
+
+      <ul>
+        {
+          result.map((item) => {
+            return (
+              <li key={item.id}>{item.name}</li>
+            )
+          })
+        }
+      </ul>
+
+      <button onClick={() => { setCount(count + 1) }}>+1</button>
     </div>
   )
+
+  //
 }
 
 export default App
