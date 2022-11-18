@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { getUser } from '../services/users'
+import Form  from  '../components/Form';
 
-const DetailPage = () => {
+const EditPage = (props) => {
   const { id } = useParams()
   const [user, setUser] = useState(null)
 
@@ -22,20 +23,10 @@ const DetailPage = () => {
 
   return(
     <div>
-      {
-        user
-          ? (
-            <>
-              <h1>{user.name}</h1>
-              <pre>
-                {JSON.stringify(user, null, 2)}
-              </pre>
-            </>
-          )
-          : <p>Cargando...</p>
-      }
+      <h1>Edit</h1>
+      <Form user={user} />
     </div>
   )
 }
 
-export default DetailPage
+export default EditPage

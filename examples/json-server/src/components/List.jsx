@@ -1,41 +1,34 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-const List = () => {
+const List = ({ users }) => {
+  const navigate = useNavigate()
+
+  const handelClick = (id) => {
+    navigate(`/edit/${id}`)
+  }
+
   return(
     <div>
       <ul>
-        <li>
-          <div>
-            <p><strong>Nombre:</strong> Cristian</p>
-            <p><strong>Email:</strong> k@m.co</p>
-            <p><strong>Role:</strong> admin</p>
-            <Link to="/detail/1">Ver detalle</Link>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p><strong>Nombre:</strong> Cristian</p>
-            <p><strong>Email:</strong> k@m.co</p>
-            <p><strong>Role:</strong> admin</p>
-            <Link to="/detail/1">Ver detalle</Link>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p><strong>Nombre:</strong> Cristian</p>
-            <p><strong>Email:</strong> k@m.co</p>
-            <p><strong>Role:</strong> admin</p>
-            <Link to="/detail/1">Ver detalle</Link>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p><strong>Nombre:</strong> Cristian</p>
-            <p><strong>Email:</strong> k@m.co</p>
-            <p><strong>Role:</strong> admin</p>
-            <Link to="/detail/1">Ver detalle</Link>
-          </div>
-        </li>
+        {
+          users.map((user) => {
+            return (
+              <li key={user.id}>
+                <div>
+                  <p><strong>Nombre:</strong> {user.name}</p>
+                  <p><strong>Email:</strong> {user.email}</p>
+                  <p><strong>Role:</strong> {user.role}</p>
+                  <Link to={`/detail/${user.id}`}>Ver detalle</Link>
+                  <button
+                    onClick={() => { handelClick(user.id) }}
+                  >
+                    Editar
+                  </button>
+                </div>
+              </li>
+            )
+          })
+        }
       </ul>
     </div>
   )

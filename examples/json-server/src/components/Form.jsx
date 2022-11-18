@@ -1,11 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import { createUser, updateUser } from '../services/users'
 
-const Form = () => {
+const Form = ({ user = null }) => {
   const [form, setForm] = useState({})
 
   const navigate = useNavigate()
+
+  useEffect(() => {
+    if (user) {
+      setForm(user)
+    }
+  }, [user])
 
   const handleChange = ({ target }) => {
     const { value, name } = target
@@ -15,42 +22,45 @@ const Form = () => {
   const handleSubmit = async (evt) => {
     evt.preventDefault()
 
-    const payload = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form)
-    }
-
     try {
-      const resp = await fetch('http://localhost:8080/api/users', payload)
-      const data = await resp.json()
-      console.log("🚀 ~ file: Form.jsx ~ line 29 ~ handleSubmit ~ data", data)
-      navigate('/')
+      if(user) {
+        // Update
+        await updateUser(form)
+      } else {
+        // Create
+        await createUser(form)
+      }
+
+      // navigate('/')
     } catch (error) {
       console.error(error)
     }
-
-    // fetch('http://localhost:8080/api/users', payload)
-    //   .then(resp => resp.json())
-    //   .then(data => {
-    //     console.log("🚀 ~ file: Form.jsx ~ line 29 ~ handleSubmit ~ data", data)
-    //     navigate('/')
-    //   })
-    //   .catch(console.error)
   }
 
   return(
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter name" onChange={handleChange} />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter name"
+          onChange={handleChange}
+          defaultValue={user?.name}
+        />
       </div>
 
       <div>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter email" onChange={handleChange} />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter email"
+          onChange={handleChange}
+          defaultValue={user?.email}
+        />
       </div>
 
       <div>
@@ -67,7 +77,9 @@ const Form = () => {
       </div>
 
       <div>
-        <button type="submit">Crear</button>
+        <button type="submit">
+          { user ? 'Update' : 'Create' }
+        </button>
       </div>
     </form>
   )
