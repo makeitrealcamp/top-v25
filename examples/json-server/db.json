@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "k@lo.com",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "name": "camilo",
+      "email": "khriztianmoreno@lo.com",
+      "password": "1234",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "name": "cristian",
+      "email": "k@mo.com",
+      "password": "1234",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "mafe",
+      "email": "mafe@gmail.com",
+      "password": "1234",
+      "role": "admin",
+      "id": 4
+    }
+  ],
+  "jobs": [],
+  "companies": []
+}

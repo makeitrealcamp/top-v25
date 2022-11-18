@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 const List = () => {
   return(
     <div>
-      <h1>Lista de usuarios</h1>
       <ul>
         <li>
           <div>
