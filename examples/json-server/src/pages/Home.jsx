@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import List from '../components/List';
+import Counter from '../components/Counter'
 import { getAllUsers } from '../services/users'
 
 const HomePage = () => {
@@ -22,7 +23,8 @@ const HomePage = () => {
   return(
     <div>
       <h1>Lista de usuarios</h1>
-      <List users={users} />
+      <Counter />
+      {/* <List users={users} /> */}
     </div>
   )
 }

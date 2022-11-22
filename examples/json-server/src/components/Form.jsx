@@ -1,23 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import useForm from '../hooks/useForm'
 import { createUser, updateUser } from '../services/users'
 
 const Form = ({ user = null }) => {
-  const [form, setForm] = useState({})
+  const {form, handleChange} = useForm({})
 
   const navigate = useNavigate()
-
-  useEffect(() => {
-    if (user) {
-      setForm(user)
-    }
-  }, [user])
-
-  const handleChange = ({ target }) => {
-    const { value, name } = target
-    setForm({ ...form, [name]: value })
-  }
 
   const handleSubmit = async (evt) => {
     evt.preventDefault()
