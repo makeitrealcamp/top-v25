@@ -7,16 +7,8 @@ import Results from './components/Results';
 
 import './App.css';
 
-const listInitOfCandidates = [
-  { id: 1, name: "Sally Student", votes: 0 },
-  { id: 2, name: "Billy Bob", votes: 0 },
-  { id: 3, name: "Joey Jojo", votes: 0 },
-  { id: 4, name: "Anna Anxious", votes: 0 },
-];
 
 const App = () => {
-  const [candidates, setCandidates] = useState(listInitOfCandidates);
-
   return (
     <div className="App-header">
       <h1>Sistema de votaciones</h1>

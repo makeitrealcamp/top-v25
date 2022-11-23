@@ -1,27 +1,25 @@
-import PropTypes from 'prop-types';
+import { useCandidatesAppContext } from '../store'
 
-const Results = (props) => {
+const Results = () => {
+  const { state } = useCandidatesAppContext();
+  const { candidates, resultType, total } = state;
+
   return (
     <div className="results">
-      {/* Your Code Here */}
       <ul>
-        <li>
-          <span>Candidate name: </span> <strong>0</strong>
-        </li>
-        <li>
-          <span>Candidate name: </span> <strong>0</strong>
-        </li>
+        {
+          candidates.map((candidate, idx) => {
+            return (
+              <li key={candidate.id}>
+                <span>{candidate.name}: </span> <strong>{candidate.votes}</strong>
+              </li>
+            )
+          })
+        }
       </ul>
     </div>
   );
 }
 
-Results.propTypes = {
-  candidates: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    votes: PropTypes.number.isRequired,
-  })).isRequired,
-  showResultType: PropTypes.string.isRequired
-}
 
 export default Results;

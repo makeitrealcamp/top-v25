@@ -1,16 +1,16 @@
-import PropTypes from 'prop-types';
+import { useCandidatesAppContext } from '../store'
 
-const TotalVotes = (props) => {
+const TotalVotes = () => {
+  const { state, dispatch } = useCandidatesAppContext()
+  // { state, dispatch }
+  //  { state: { candidates: [], showResultType: 'total', total: 0 }, dispatch: function }
+
   return(
     <div className="total">
       {/* Your code here */}
-      Total Votes:<strong> 0</strong>
+      Total Votes:<strong> {state.total}</strong>
     </div>
   )
-}
-
-TotalVotes.propTypes = {
-  totalVotes: PropTypes.number.isRequired
 }
 
 export default TotalVotes

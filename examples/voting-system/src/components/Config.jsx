@@ -1,22 +1,41 @@
-import PropTypes from 'prop-types';
+import { useCandidatesAppContext } from '../store'
+import { RESULT_TYPE } from '../store/actionsTypes'
 
-const Config = (props) => {
+const Config = () => {
+  const { state, dispatch } = useCandidatesAppContext()
+
+  const handleChange = ({ target }) => {
+    const { value } = target;
+    dispatch({type: RESULT_TYPE, payload: value})
+  }
+
   return (
     <div className="filters">
       <label htmlFor="percentage" className="filters__item">
-        <input type="radio" name="percentage" id="percentage"  />
+        <input
+          type="radio"
+          value="percentage"
+          id="percentage"
+          name="type"
+          onChange={handleChange}
+          // checked={state.resultType === 'percentage'}
+        />
         <span>Percentage</span>
       </label>
-      <label htmlFor="absolute" className="filters__item">
-        <input type="radio" name="absolute" id="absolute"  />
-        <span>Absolute</span>
+      <label htmlFor="total" className="filters__item">
+        <input
+          type="radio"
+          value="total"
+          id="total"
+          name="type"
+          onChange={handleChange}
+          // checked={state.resultType === 'total'}
+        />
+        <span>Total</span>
       </label>
     </div>
   );
 }
 
-Config.propTypes = {
-  onHandleFilter: PropTypes.func.isRequired
-}
 
 export default Config;

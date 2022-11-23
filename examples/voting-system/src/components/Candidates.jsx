@@ -1,24 +1,18 @@
-import PropTypes from 'prop-types';
-
 import Candidate from "./Candidate";
+import { useCandidatesAppContext } from "../store";
+
 
 const Candidates = (props) => {
+  const { state } = useCandidatesAppContext();
   return (
     <div className="candidates-list">
-      <Candidate />
-      <Candidate />
-      <Candidate />
-      <Candidate />
+      {
+        state.candidates.map((candidate, idx) => {
+          return <Candidate key={candidate.id} candidate={candidate}/>
+        })
+      }
     </div>
   );
-}
-
-Candidates.propTypes = {
-  candidates: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  })).isRequired,
-  onHandleVote: PropTypes.func.isRequired
 }
 
 export default Candidates;

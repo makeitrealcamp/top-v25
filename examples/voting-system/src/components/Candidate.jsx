@@ -1,16 +1,26 @@
-import PropTypes from 'prop-types'
+import { useCandidatesAppContext } from '../store'
+import { INCREMENT } from '../store/actionsTypes'
 
-const Candidate = (props) => {
+const Candidate = ({ candidate }) => {
+  const {dispatch} = useCandidatesAppContext()
+
+  const handleClickVote = (id) => {
+    console.log(id)
+    dispatch({ type: INCREMENT, payload: id })
+  }
+
   return(
     <div className="candidate">
-      {/* Your code here */}
+      <button
+        type="button"
+        onClick={() => handleClickVote(candidate.id)}
+      >
+        {candidate.name}
+      </button>
     </div>
   )
 }
 
-Candidate.propTypes = {
-  name: PropTypes.string.isRequired,
-  onHandleVote: PropTypes.func.isRequired
-}
+
 
 export default Candidate
