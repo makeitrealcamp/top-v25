@@ -1,31 +1,22 @@
-import { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 
-
-const randomTask = {
-  id: 1,
-  title: 'Insertar en la DB',
-  isCompleted: true
-}
-const randomTask2 = {
-  id: 2,
-  title: 'giT cOMMIT',
-  isCompleted: false
-}
-
-function App() {
-  const [tasks, setTasks] = useState([randomTask, randomTask2])
+function TodoApp() {
+  // const [tasks, setTasks] = useState([])
+  const tasks = useSelector((state)=>{
+    return state.tasks
+  })
 
   const handleAddTask = (newTask) => {
-    setTasks(tasks.concat(newTask))
+    // setTasks(tasks.concat(newTask))
   }
 
   const handleCleanDone = () => {
     const newList = tasks.filter((item) => !item.isCompleted)
 
-    setTasks(newList)
+    // setTasks(newList)
   }
 
   const handleEdit = (task) => {
@@ -43,11 +34,11 @@ function App() {
     })
 
 
-    setTasks(taskUpdated)
+    // setTasks(taskUpdated)
   }
 
   return (
-    <div className="App">
+    <div>
       <TodoForm handleAddTask={handleAddTask} />
       <TodoList
         listTask={tasks}
@@ -58,4 +49,4 @@ function App() {
   )
 }
 
-export default App
+export default TodoApp

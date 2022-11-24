@@ -13,7 +13,7 @@ const TodoList = (props) => {
               <TodoItem
                 key={item.id}
                 id={item.id}
-                title={item.title}
+                title={item.name}
                 isDone={item.isCompleted}
                 handleEdit={handleEdit}
               />

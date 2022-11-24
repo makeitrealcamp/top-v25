@@ -19,7 +19,7 @@ const TodoForm = ({ handleAddTask }) => {
       isCompleted: false,
     }
 
-    handleAddTask(newTask)
+    // TODO: your code here
   }
 
   return(
