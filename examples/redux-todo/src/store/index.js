@@ -1,31 +1,16 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk'
 
-const initialState = {
-  tasks: [
-    { id: 1, name: 'Task 1', completed: false },
-  ],
-  isLoading: false,
-}
+import todoReducer from './reducer';
 
-function reducer(state = initialState, action = {}) {
-  const { tasks, isLoading } = state;
-  const { type, payload } = action;
-
-  if (type === "NEW_TASK"){
-    let newTasks = tasks.concat(payload)
-    return { ...state, tasks : newTasks }
-  }
-  // NEW_TASK
-
-
-
-  return state;
-}
+const composeEnhancers = compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  todoReducer,
+  composeEnhancers
 );
-
 
 export default store;

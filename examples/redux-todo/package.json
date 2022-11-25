@@ -11,13 +11,20 @@
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
+    "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "database": "json-server --watch db.json --port 8080 --routes routes.json",
+    "dev": "run-p start database"
   },
   "eslintConfig": {
     "extends": [

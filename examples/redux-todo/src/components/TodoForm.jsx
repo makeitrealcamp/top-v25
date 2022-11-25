@@ -1,10 +1,15 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
-const TodoForm = ({ handleAddTask }) => {
+import { addTask } from '../store/actions'
+
+
+const TodoForm = () => {
   const [inputValue, setInputValue] = useState('')
+  const dispatch = useDispatch()
 
   const handleChange = ({ target }) => {
-    const { value, name } = target
+    const { value } = target
 
     // guardar cada cambio en una variable de estado
     setInputValue(value)
@@ -13,13 +18,13 @@ const TodoForm = ({ handleAddTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const newTask = {
-      id: Math.floor(Math.random() * 100),
-      title: inputValue,
-      isCompleted: false,
+    const task = {
+      name: inputValue,
+      completed: false,
     }
 
     // TODO: your code here
+    dispatch(addTask(task))
   }
 
   return(

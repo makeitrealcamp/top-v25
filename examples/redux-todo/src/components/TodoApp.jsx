@@ -1,10 +1,13 @@
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
 import TodoForm from './TodoForm'
 import TodoList from './TodoList'
 
+import { fetchTasks } from '../store/actions'
+
 function TodoApp() {
-  // const [tasks, setTasks] = useState([])
+  const dispatch = useDispatch()
   const tasks = useSelector((state)=>{
     return state.tasks
   })
@@ -36,6 +39,10 @@ function TodoApp() {
 
     // setTasks(taskUpdated)
   }
+
+  useEffect(() => {
+    dispatch(fetchTasks())
+  }, [dispatch])
 
   return (
     <div>
