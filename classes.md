@@ -44,3 +44,13 @@
 - **Redux Middelware**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-25/9NrCQU2hX.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-25/9NrCQU2hX.mp4)
 - **Redux Tool kit**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-28/gfGS6vikS.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-28/gfGS6vikS.mp4)
 - **ENTREGABLE 4**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-28/X5IvzUyMv.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-28/X5IvzUyMv.mp4)
+
+## Sprint 8
+
+- **Introducción a Base de datos:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-29/MBvbDB-0F.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-29/MBvbDB-0F.mp4)
+- **MongoDB Queries**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-29/U36KR3KN-.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-29/U36KR3KN-.mp4)
+- **Intro a Typescript**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-30/bkBQkV2ng.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-30/bkBQkV2ng.mp4)
+- **Diseño de base de datos**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-30/HWiilNQ38.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-11-30/HWiilNQ38.mp4)
+- **API con express**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/7EwlDPsgT.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/7EwlDPsgT.mp4)
+- **Express con Mongoose:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/9tI59Sf11.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/9tI59Sf11.mp4)
+- **Ejercicio API CRUD:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-02/yXbWLbPgt.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-02/yXbWLbPgt.mp4)
