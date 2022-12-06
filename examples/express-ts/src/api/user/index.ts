@@ -6,6 +6,7 @@ import {
   handleDeleteUser,
   handleGetUser,
   handleUpdateUser,
+  handleLoginUser
 } from './user.controller';
 
 const router = Router();
@@ -22,5 +23,10 @@ router.post('/', handleCreateUser);
 router.patch('/:id', handleUpdateUser);
 // DELETE /api/users/:id
 router.delete('/:id', handleDeleteUser);
+
+
+// Login
+// POST /api/users/login
+router.post('/login', handleLoginUser);
 
 export default router;

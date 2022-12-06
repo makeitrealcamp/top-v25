@@ -1,7 +1,11 @@
-import user from './api/user';
+import { Application } from 'express';
 
-function routes(app) {
+import user from './api/user';
+import product from './api/product';
+
+function routes(app: Application): void {
   app.use('/api/users', user);
+  app.use('/api/products', product);
 
 }
 
