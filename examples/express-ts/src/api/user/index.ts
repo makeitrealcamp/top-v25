@@ -1,12 +1,13 @@
 import { Router } from 'express';
 
+import { isAuthenticated } from '../../auth/auth.services';
+
 import {
   handleAllGetUsers,
   handleCreateUser,
   handleDeleteUser,
   handleGetUser,
   handleUpdateUser,
-  handleLoginUser
 } from './user.controller';
 
 const router = Router();
@@ -20,13 +21,8 @@ router.get('/:id', handleGetUser);
 // POST /api/users
 router.post('/', handleCreateUser);
 // PATCH /api/users/:id
-router.patch('/:id', handleUpdateUser);
+router.patch('/:id', isAuthenticated, handleUpdateUser);
 // DELETE /api/users/:id
-router.delete('/:id', handleDeleteUser);
-
-
-// Login
-// POST /api/users/login
-router.post('/login', handleLoginUser);
+router.delete('/:id', isAuthenticated, handleDeleteUser);
 
 export default router;

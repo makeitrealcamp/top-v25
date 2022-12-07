@@ -5,10 +5,10 @@ import {
   getUserById,
   deleteUser,
   createUser,
-  getUser,
 } from "./user.services";
 
 export async function handleAllGetUsers(req: Request, res: Response, next: NextFunction) {
+  console.log('Estoy en el siguiente middleware', req.body)
   try {
     const users = await getAllUsers();
     return res.status(200).json(users);
@@ -55,25 +55,5 @@ export async function handleDeleteUser(req: Request, res: Response, next: NextFu
     return res.status(200).json({ message: "User deleted" });
   } catch(error) {
     return res.status(500).json(error);
-  }
-}
-
-
-export async function handleLoginUser(req: Request, res: Response, next: NextFunction) {
-  const { email, password } = req.body;
-
-  try {
-    const user = await getUser({ email });
-    console.log("🚀 ~ file: user.controller.ts:67 ~ handleLoginUser ~ user", user)
-
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    const validPassword = await user.comparePassword(password)
-
-    return res.status(200).json({ message: "User logged in", validPassword });
-  } catch (error: any) {
-    return res.status(500).json(error.message);
   }
 }

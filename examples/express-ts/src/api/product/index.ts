@@ -1,5 +1,7 @@
 import { Router } from 'express';
 
+import { isAuthenticated } from '../../auth/auth.services';
+
 import {
   handleAllGetProducts,
   handleCreateProduct,
@@ -21,6 +23,6 @@ router.post('/', handleCreateProduct);
 // PATCH /api/products/:id
 router.patch('/:id', handleUpdateProduct);
 // DELETE /api/products/:id
-router.delete('/:id', handleDeleteProduct);
+router.delete('/:id', isAuthenticated, handleDeleteProduct);
 
 export default router;

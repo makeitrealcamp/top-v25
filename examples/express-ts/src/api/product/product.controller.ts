@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
+import { AuthRequest } from '../../auth/auth.types';
 import {
   getAllProducts,
   getProductById,
@@ -51,14 +52,19 @@ export async function handleUpdateProduct(req: Request, res: Response, next: Nex
   return res.status(200).json(product);
 }
 
-export async function handleDeleteProduct(req: Request, res: Response, next: NextFunction) {
+export async function handleDeleteProduct(req: AuthRequest, res: Response, next: NextFunction) {
   const { id } = req.params;
+  console.log('estoy dentro del controller', req.user)
+  try {
 
-  const product = await deleteProduct(id);
+    // const product = await deleteProduct(id);
 
-  if (!product) {
-    return res.status(404).json({ message: 'Product not found' });
+    // if (!product) {
+    //   return res.status(404).json({ message: 'Product not found' });
+    // }
+
+    return res.status(200).json({ message: 'Product deleted' });
+  } catch (error) {
+    return res.status(500).json(error);
   }
-
-  return res.status(200).json(product);
 }
