@@ -1,9 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
+import { Response, NextFunction } from 'express';
 import jwt  from 'jsonwebtoken';
 
 import { UserDocument } from '../api/user/user.model';
 import { getUser } from '../api/user/user.services';
-import { AuthRequest } from './auth.types';
+import { AuthRequest, Roles } from './auth.types';
 
 const SECRET = process.env.SECRET_TOKEN_APP as string;
 
@@ -38,7 +38,13 @@ export function verifyToken(token: string) {
 }
 
 
-// isAuthenticated
+/**
+ * Verifies if the user is authenticated
+ * @param req
+ * @param res
+ * @param next
+ * @returns
+ */
 export async function isAuthenticated(req: AuthRequest, res: Response, next: NextFunction) {
   const token = req.headers?.authorization?.split(' ')[1];
 
@@ -65,4 +71,20 @@ export async function isAuthenticated(req: AuthRequest, res: Response, next: Nex
 }
 
 
-// hasRole
+/**
+ * Verifies if the user has the required role
+ * @param allowRoles Roles
+ * @returns
+ */
+export function hasRole(allowRoles: Roles) {
+  return (req: AuthRequest, res: Response, next: NextFunction) => {
+    const { role } = req.user as UserDocument;
+
+    if (!allowRoles.includes(role)) {
+      return res.status(403).json({ message: 'Forbidden' });
+    }
+
+    next();
+    return true;
+  }
+}

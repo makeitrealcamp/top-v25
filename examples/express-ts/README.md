@@ -1,8 +1,23 @@
 # NODE-Server Typescript Example 💻
-bla bla bla
+Hello and welcome! This Node.JS project demonstrates a simple architecture building a full API with Node.JS, Express.JS, and MongoDB presents an architectural demo of these features:
+
+- Built with Node.js and Express
+- Typescript
+- Mongoose ODM
+- REST API
 
 ## Express Router and Routes
 
+| Route               | HTTP Verb | Route Middleware   | Description                          |
+| --------------------| --------- | ------------------ | ------------------------------------ |
+| /api/users          | GET       |                    | Get list of users                    |
+| /api/users          | POST      |                    | Creates a new users                  |
+| /api/users/:id      | GET       |                    | Get a single users                   |
+| /api/users/:id      | DELETE    | isAuthenticated    | Deletes a user                       |
+
+
+## Usage
+The use of endpoints is very simple, previously you could see a table of endpoints that you can call, if you need to create a note or log in, here we have some examples.
 
 ### Authentication user `/auth/local/login`
 

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { isAuthenticated } from '../../auth/auth.services';
+import { isAuthenticated, hasRole } from '../../auth/auth.services';
 
 import {
   handleAllGetProducts,
@@ -11,7 +11,6 @@ import {
 } from './product.controller';
 
 const router = Router();
-
 // RESTful API
 
 // GET /api/products
@@ -23,6 +22,6 @@ router.post('/', handleCreateProduct);
 // PATCH /api/products/:id
 router.patch('/:id', handleUpdateProduct);
 // DELETE /api/products/:id
-router.delete('/:id', isAuthenticated, handleDeleteProduct);
+router.delete('/:id', isAuthenticated, hasRole(['ADMIN', 'USER']), handleDeleteProduct);
 
 export default router;

@@ -54,7 +54,6 @@ export async function handleUpdateProduct(req: Request, res: Response, next: Nex
 
 export async function handleDeleteProduct(req: AuthRequest, res: Response, next: NextFunction) {
   const { id } = req.params;
-  console.log('estoy dentro del controller', req.user)
   try {
 
     // const product = await deleteProduct(id);

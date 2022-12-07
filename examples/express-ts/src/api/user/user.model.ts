@@ -9,7 +9,7 @@ export interface UserDocument extends Document {
   email: string;
   password: string; // 1234 -> hash - SHA256 -> 64 chars -> 32 bytes ->
   avatar?: string;
-  role: string;
+  role: 'USER' | 'ADMIN';
   isActive: boolean;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
