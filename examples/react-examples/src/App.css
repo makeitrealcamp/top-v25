@@ -39,3 +39,19 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.login {
+  border-radius: 20px;
+  border: 1px solid green;
+  margin-bottom: 40px;
+  padding: 20px 40px;
+}
+
+
+.users {
+  border-radius: 20px;
+  border: 1px solid yellow;
+  margin-bottom: 40px;
+  padding: 20px 40px;
+}
