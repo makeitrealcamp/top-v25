@@ -54,3 +54,14 @@
 - **API con express**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/7EwlDPsgT.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/7EwlDPsgT.mp4)
 - **Express con Mongoose:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/9tI59Sf11.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-01/9tI59Sf11.mp4)
 - **Ejercicio API CRUD:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-02/yXbWLbPgt.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-02/yXbWLbPgt.mp4)
+- **ENTREGABLE 5**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-05/_qgM4Axbm.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-05/_qgM4Axbm.mp4)
+
+## Sprint 9
+
+- **Mongoose Referencia a otros modelos**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-05/5NoMHGE_B.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-05/5NoMHGE_B.mp4)
+- **Encriptar y comparar password usando Bcrypt:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-06/esQHyI4x-.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-06/esQHyI4x-.mp4)
+- **Creacion de JWT**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-06/90PRPzeje.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-06/90PRPzeje.mp4)
+- **Modulo de autenticacion:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/JQjLGVqiJ.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/JQjLGVqiJ.mp4)
+- **Validacion de roles en los request**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/qrXDFAQyq.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/qrXDFAQyq.mp4)
+- **Deploy Backend**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/o046N9XA7.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/o046N9XA7.mp4)
+- **ENTREGABLE 6:**  [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/cLocwGsCx.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/cLocwGsCx.mp4)
