@@ -7,6 +7,7 @@ import {
   createUser,
 } from "./user.services";
 import log from '../../logger'
+import { sendNodeMailer } from '../../utils/emails';
 
 export async function handleAllGetUsers(req: Request, res: Response, next: NextFunction) {
   try {
@@ -37,11 +38,26 @@ export async function handleGetUser(req: Request, res: Response, next: NextFunct
 export async function handleCreateUser(req: Request, res: Response, next: NextFunction) {
   const data = req.body;
   try {
-    const user = await createUser(data);
+    // const user = await createUser(data);
 
     // TODO: Send email to user
+    const emailData = {
+      from: 'No reply <cristian.moreno@makeitreal.camp>',
+      to: data.email,
+      subject: 'Welcome to Make it Real',
+      text: 'Welcome to Make it Real',
+      html: '<b>Welcome to Make it Real</b>',
+      attachments: [
+        {
+          filename: 'text1.txt',
+          content: 'hello world!'
+        }
+      ]
+    }
 
-    return res.status(201).json(user);
+    await sendNodeMailer(emailData)
+
+    return res.status(201).json(data);
   } catch (error: any) {
     log.error(error)
     return res.status(500).json(error.message);
