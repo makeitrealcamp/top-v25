@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
-import Mail from "nodemailer/lib/mailer";
+import Mail from 'nodemailer/lib/mailer';
+import sgMail from '@sendgrid/mail';
 
 function createGmailTransporter(){
   const hostname = process.env.SMTP_SERVER;
@@ -31,4 +32,9 @@ export async function sendNodeMailer(data: Mail.Options) {
   return info;
 }
 
+export function sendMailSendGrid(data: sgMail.MailDataRequired) {
+  const apiKey = process.env.SENDGRID_API_KEY as string;
+  sgMail.setApiKey(apiKey);
 
+  return sgMail.send(data);
+}
