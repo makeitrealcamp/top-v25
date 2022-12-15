@@ -20,10 +20,13 @@ const CheckoutForm = () => {
       return
     }
 
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJDYW1pbG8iLCJsYXN0TmFtZSI6Ik1PUkVOTyIsImVtYWlsIjoiY3Jpc3RpYW4ubW9yZW5vQG1ha2VpdHJlYWwuY2FtcCIsImF2YXRhciI6IiIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNjcxMDQxNDYzLCJleHAiOjE2NzEwNzc0NjN9.-33g6TwL8lvZSrAd7tv1T4NeDh9Or9YMWmky1lGUIDE'
+
     const options = {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         paymentMethod,
@@ -31,7 +34,7 @@ const CheckoutForm = () => {
       })
     }
 
-    const response = await fetch('http://localhost:8080/api/checkout', options)
+    const response = await fetch('http://localhost:8080/api/payments/', options)
     const data = await response.json()
     console.log("🚀 ~ file: CheckoutForm.jsx:36 ~ handleSubmit ~ data", data)
 
