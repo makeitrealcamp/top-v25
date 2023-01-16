@@ -1,9 +1,11 @@
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
-import { login } from '../services/auth'
+import { loginActionAsync } from '../features/auth/authSlice'
 
 const LoginForm = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -11,11 +13,12 @@ const LoginForm = () => {
     const { email, password } = e.target
 
     try {
-      const { token, profile } = await login(email.value, password.value)
+      const action = loginActionAsync({email: email.value, password: password.value})
+      const { payload } = await dispatch(action)
 
-      localStorage.setItem('token', token)
+      localStorage.setItem('auth', JSON.stringify(payload))
 
-      // Redirect to profile page
+      // Redirect to home
       navigate('/')
     } catch (error) {
       console.error(error)
