@@ -189,3 +189,80 @@ services:
 En este ejemplo, tenemos dos servicios: "app" y "mongo". El servicio "app" se construye a partir del directorio actual (.) y se expone en el puerto 8080 del host. El servicio "app" también depende del servicio "mongo", y se utiliza una variable de entorno para especificar la URL de conexión a la base de datos. El servicio "mongo" utiliza la imagen oficial de MongoDB y se expone en el puerto 27017 del host.
 
 Para ejecutar este compose, se debería de ejecutar el comando `docker-compose up` en la terminal en la ruta donde se encuentra el archivo yml, y esto levantaría los dos servicios.
+
+### Ejercicio Docker y MongoDB
+
+1. Crear un contenedor de MongoDB llamado `mongo-dev` que se ejecute en segundo plano y que este expuesto en el puerto 27017 del host. Crear un volumen y enlazarlo al contenedor.
+2. Ingresar al contenedor `mongo-dev` y crear una base de datos llamada `movies_db`. Para resolver este ejercicio se utilizara el 'mongo shell' de MongoDB.
+
+Ejemplo:
+
+```bash
+docker exec -it mongo-dev mongo
+```
+
+3. Crear una colección llamada `movies` y agregar los siguientes documentos a la colección.
+
+```
+title : Fight Club
+writer : Chuck Palahniuk
+year : 1999
+actors : [
+  Brad Pitt
+  Edward Norton
+]
+```
+
+```
+title : Pulp Fiction
+writer : Quentin Tarantino
+year : 1994
+actors : [
+  John Travolta
+  Uma Thurman
+]
+```
+
+```
+title : Inglorious Basterds
+writer : Quentin Tarantino
+year : 2009
+actors : [
+  Brad Pitt
+  Diane Kruger
+  Eli Roth
+]
+```
+
+```
+title : The Hobbit: An Unexpected Journey
+writer : J.R.R. Tolkein
+year : 2012
+franchise : The Hobbit
+```
+
+```
+title : The Hobbit: An Unexpected Journey
+writer : J.R.R. Tolkein
+year : 2012
+franchise : The Hobbit
+```
+
+```
+title : Pee Wee Herman's Big Adventure
+```
+
+```
+title : Pee Wee Herman's Big Adventure
+```
+
+4. Consultas / Buscar documentos
+
+Realizar las siguientes consultas en la colección `movies`:
+
+- Obtener todos los documentos
+- Obtener documentos con `writer` igual a "Quentin Tarantino"
+- Obtener documentos con `actors` que incluyan a "Brad Pitt"
+- Obtener documentos con `franchise` igual a "The Hobbit"
+- Obtener todas las películas de los 90s.
+- Obtener las películas estrenadas entre el año 2000 y 2010.
