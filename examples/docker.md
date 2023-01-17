@@ -198,7 +198,7 @@ Para ejecutar este compose, se debería de ejecutar el comando `docker-compose u
 Ejemplo:
 
 ```bash
-docker exec -it mongo-dev mongo
+docker exec -it mongo-dev mongosh
 ```
 
 3. Crear una colección llamada `movies` y agregar los siguientes documentos a la colección.
@@ -266,3 +266,4 @@ Realizar las siguientes consultas en la colección `movies`:
 - Obtener documentos con `franchise` igual a "The Hobbit"
 - Obtener todas las películas de los 90s.
 - Obtener las películas estrenadas entre el año 2000 y 2010.
+
