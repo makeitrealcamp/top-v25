@@ -145,3 +145,47 @@ docker run --name my_container -d --network my_network nginx
 ```bash
 docker run --name my_container -d -v my_volume:/var/www/html nginx
 ```
+
+## Docker compose
+
+```bash
+docker-compose up -d
+```
+
+## Docker compose con build
+
+```bash
+docker-compose up -d --build
+```
+
+## Docker compose con build y sin cache
+
+```bash
+docker-compose up -d --build --no-cache
+```
+
+## Docker compose node, express y mongo - `docker-compose.yml`
+
+```
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/mydb
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - db_data:/data/db
+```
+
+En este ejemplo, tenemos dos servicios: "app" y "mongo". El servicio "app" se construye a partir del directorio actual (.) y se expone en el puerto 8080 del host. El servicio "app" también depende del servicio "mongo", y se utiliza una variable de entorno para especificar la URL de conexión a la base de datos. El servicio "mongo" utiliza la imagen oficial de MongoDB y se expone en el puerto 27017 del host.
+
+Para ejecutar este compose, se debería de ejecutar el comando `docker-compose up` en la terminal en la ruta donde se encuentra el archivo yml, y esto levantaría los dos servicios.
