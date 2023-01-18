@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebSockets</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+  <style>
+    #map { height: 380px; margin: 20px 0; }
+    .alert {
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .alert-error {
+      background-color: #f44336;
+    }
+
+    .alert-info {
+      background-color: #2196F3;
+    }
+
+    .alert-warning {
+      background-color: #ff9800;
+    }
+  </style>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+</head>
+<body>
+  <h1>Web Socket simple</h1>
+  <br>
+  <div id="map"></div>
+  <br>
+  <div id="alerts">
+
+  </div>
+  <button id="btn">Send Message</button>
+
+  <script>
+    const $btn = document.querySelector('#btn')
+    const $alerts = document.querySelector('#alerts')
+    const socket = new WebSocket('ws://localhost:8080')
+
+    const map = L.map('map')
+
+    navigator.geolocation.getCurrentPosition((position) => {
+      const lat = position.coords.latitude;
+      const long = position.coords.longitude;
+
+      map.setView([lat, long], 23);
+      console.log("🚀 ~ file: index.html:54 ~ navigator.geolocation.getCurrentPosition ~ position.coord", position.coord)
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+    });
+
+
+
+    function createAlert(alert) {
+      const { coords, message, type } = alert
+
+      const $alert = document.createElement('div')
+      $alert.classList.add('alert')
+      $alert.classList.add(`alert-${type.toLowerCase()}`)
+      $alert.textContent = message
+
+
+      L.marker(coords).addTo(map)
+        .bindPopup(message)
+        .openPopup();
+
+      // Insert alert in the DOM
+      $alerts.appendChild($alert)
+    }
+
+    socket.addEventListener('open', () => {
+      console.log('Connected to server')
+    })
+
+    socket.addEventListener('message', (event) => {
+      createAlert(JSON.parse(event.data))
+    })
+
+
+
+  </script>
+
+
+</body>
+</html>
