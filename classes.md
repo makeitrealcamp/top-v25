@@ -65,3 +65,31 @@
 - **Validacion de roles en los request**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/qrXDFAQyq.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-07/qrXDFAQyq.mp4)
 - **Deploy Backend**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/o046N9XA7.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/o046N9XA7.mp4)
 - **ENTREGABLE 6:**  [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/cLocwGsCx.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-12/cLocwGsCx.mp4)
+
+## Sprint 10
+
+- **Envio de correo con Nodemailer:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-13/JWp82hdiS.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-13/JWp82hdiS.mp4)
+- **Activar cuenta y envio de email con sendgrid:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-13/jP-h-8nYy.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-13/jP-h-8nYy.mp4)
+- **Pasarela de pagos - Stripe**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-14/2rDf7R4Zv.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-14/2rDf7R4Zv.mp4)
+- **Enviar imagenes al servidor y subirlas a cloudinary:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-15/lr-X0IcUI.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2022-12-15/lr-X0IcUI.mp4)
+- **ENTREGABLE 7**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-10/OxkUrQW5h.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-10/OxkUrQW5h.mp4)
+
+## Sprint 11
+
+- **Fundamentos de testing:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-10/Prsj9R2Mx.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-10/Prsj9R2Mx.mp4)
+- **TDD** **y JEST**:  [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-11/AOBOYxI7i.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-11/AOBOYxI7i.mp4)
+- **SuperTest & Jest:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-11/P_zqvF-Gu.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-11/P_zqvF-Gu.mp4)
+- **React Testing Library**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-12/6JRQhs4gN.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-12/6JRQhs4gN.mp4)
+- **OAuth2 y Auth0:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-13/iS64Pr-nw.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-13/iS64Pr-nw.mp4)
+- **CI & CD:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-13/b3BlRfWME.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-13/b3BlRfWME.mp4)
+
+## Sprint 12
+
+- **auth reac**t: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-16/fDia0C_c7.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-16/fDia0C_c7.mp4)
+- **auth con redux toolkit:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-16/zq76lOHOs.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-16/zq76lOHOs.mp4)
+- **Docker**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-17/NId8k3dWi.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-17/NId8k3dWi.mp4)
+- **WebSockets**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-18/XpcVQsP8k.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-18/XpcVQsP8k.mp4)
+- **SocketIO**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-18/QYf3ZXRiQ.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-18/QYf3ZXRiQ.mp4)
+- **Cache con Redis:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/bxvLUq2GM.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/bxvLUq2GM.mp4)
+- **Asesoria**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/A4XAVlCFb.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/A4XAVlCFb.mp4)
+- **PRE-DEMO:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-20/Dz-rYfbNW.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-20/Dz-rYfbNW.mp4)
