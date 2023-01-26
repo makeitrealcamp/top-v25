@@ -1,6 +1,3 @@
-
-export const fetcher = (...args) => fetch(...args).then(res => res.json())
-
 export const loginUser = async (auth) => {
   const options = {
     method: 'POST',
