@@ -10,7 +10,7 @@ import {
 
 import { loginUser } from '../../services/auth';
 
-const LoginForm = () => {
+const LoginForm = ({ navigate }) => {
   const [form, setForm] = useState({});
 
   const handleChangeText = (field, text) => {
@@ -21,18 +21,21 @@ const LoginForm = () => {
   };
 
   const handleSubmit = async () => {
-    if (!form?.email && !form?.password) {
-      Alert.alert('Error', 'Please enter your email and password');
-      return;
-    }
+    // Navegar al home ???
+    navigate('Landing');
 
-    try {
-      const response = await loginUser(form);
-      const { token, profile } = await response.json();
-      console.log('token', token);
-    } catch (error) {
-      Alert.alert('Error', 'Invalid email or password');
-    }
+    // if (!form?.email && !form?.password) {
+    //   Alert.alert('Error', 'Please enter your email and password');
+    //   return;
+    // }
+
+    // try {
+    //   const response = await loginUser(form);
+    //   const { token, profile } = await response.json();
+    //   console.log('token', token);
+    // } catch (error) {
+    //   Alert.alert('Error', 'Invalid email or password');
+    // }
   };
 
   return (

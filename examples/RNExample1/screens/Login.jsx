@@ -1,14 +1,22 @@
-import { KeyboardAvoidingView, StyleSheet, Platform } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Platform, Button } from 'react-native'
 
 import LoginForm from '../componets/Form/Login'
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation} ) => {
   return(
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
       style={styles.container}
     >
-      <LoginForm />
+      <LoginForm navigate={navigation.navigate} />
+      <Button
+        title="Go to Register"
+        onPress={() => navigation.navigate('Register')}
+      />
+      <Button
+        title="Go to Landing"
+        onPress={() => navigation.navigate('Landing')}
+      />
     </KeyboardAvoidingView>
   )
 }
