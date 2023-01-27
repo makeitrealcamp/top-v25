@@ -93,3 +93,13 @@
 - **Cache con Redis:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/bxvLUq2GM.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/bxvLUq2GM.mp4)
 - **Asesoria**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/A4XAVlCFb.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-19/A4XAVlCFb.mp4)
 - **PRE-DEMO:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-20/Dz-rYfbNW.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-20/Dz-rYfbNW.mp4)
+
+## Sprint 13
+
+- **Introduccion a React Native**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-23/EeYbHusCk.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-23/EeYbHusCk.mp4)
+- **Core Components y Estilos:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-25/8UrdZa3Ro.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-25/8UrdZa3Ro.mp4)
+- **Formularios y peticiones HTTP:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-25/5JPKKNHI7.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-25/5JPKKNHI7.mp4)
+- **ReactNavigation - Enrutamiento para React Native:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-26/bwUdYGA03.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-26/bwUdYGA03.mp4)
+- **Sensores - imágenes, cámara, mapa, location:** [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-26/mbAxN4FC0.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-26/mbAxN4FC0.mp4)
+- **Ejercicio React Native**: [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-27/j_mzdF42v.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-27/j_mzdF42v.mp4)
+- **BONUS  Testing CON German:**  [https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-24/5T1wPu0HL.mp4](https://makeitreal.s3.amazonaws.com/videos/85869635202/2023-01-24/5T1wPu0HL.mp4)
