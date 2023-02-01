@@ -1,32 +1,35 @@
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const CharacterCard = ({ character }) => (
-  <article className="characterCard">
-    <div className="characterImagen">
-      <img src={character.image} alt="Blue Footprint Guy" />
-    </div>
-    <div className="characterContent">
-      <div className="section">
-        <h2>{character.name}</h2>
-        <span className="status">
-          <span
-            className={`status__icon ${
-              character.status === "Dead" ? "status__dead" : "status__alive"
-            }`}
-          ></span>
-          {character.status} - {character.species}
-        </span>
+  <Link to={`/detail/${character.id}`} className="characterCard">
+    <article className="characterCard">
+      <div className="characterImagen">
+        <img src={character.image} alt="Blue Footprint Guy" />
       </div>
-      <div className="section">
-        <span className="text-gray">Last known location:</span>
-        <a href={character.origin.url}>{character.origin.name}</a>
+      <div className="characterContent">
+        <div className="section">
+          <h2>{character.name}</h2>
+          <span className="status">
+            <span
+              className={`status__icon ${
+                character.status === "Dead" ? "status__dead" : "status__alive"
+              }`}
+            ></span>
+            {character.status} - {character.species}
+          </span>
+        </div>
+        <div className="section">
+          <span className="text-gray">Last known location:</span>
+          {character.origin.name}
+        </div>
+        <div className="section">
+          <span className="text-gray">First seen in:</span>
+          {character.location.name}
+        </div>
       </div>
-      <div className="section">
-        <span className="text-gray">First seen in:</span>
-        <a href={character.location.url}>{character.location.name}</a>
-      </div>
-    </div>
-  </article>
+    </article>
+  </Link>
 );
 
 export default CharacterCard;

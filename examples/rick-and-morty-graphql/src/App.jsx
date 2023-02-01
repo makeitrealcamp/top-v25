@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="App">
+      <main className="App root">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/detail/:id" element={<Detail />} />
