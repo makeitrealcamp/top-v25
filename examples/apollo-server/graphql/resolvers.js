@@ -1,13 +1,16 @@
 import bookResolvers from './book/book.resolvers.js';
+import userReolvers from './user/user.resolvers.js';
 
 const resolvers = {
   Query: {
     helloWorld: () => 'Hello world!',
-    ...bookResolvers.Query,
+    ...bookResolvers.query,
+    ...userReolvers.query,
   },
 
   Mutation: {
-    ...bookResolvers.Mutation,
+    ...bookResolvers.mutation,
+    ...userReolvers.mutation,
   },
 }
 

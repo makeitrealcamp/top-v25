@@ -1,46 +1,29 @@
-const books = [
-  {
-    id: "1",
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    id: "2",
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-  {
-    id: "3",
-    title: 'The Great Gatsby',
-    author: 'F. Scott Fitzgerald',
-  },
-  {
-    id: "4",
-    title: 'Harry Potter and the Sorcerer\'s Stone',
-    author: 'J.K. Rowling',
-  },
-];
+import Book from './book.model.js';
 
-export const allBooks = () => books;
-
-export const getSingleBook = ({ title, author }) => {
-  return books.find(book => book.title === title || book.author === author);
+export function getAllBooks() {
+  return Book.find();
 }
 
-export const getById = (id) => {
-  return books.find(book => book.id === id);
+export function getSingleBook({ title, author }) {
+  return Book.findOne({
+    $or: [
+      { title: { $regex: `${title}`, $options: 'i' } },
+      { author: { $regex: `${author}`, $options: 'i' } }
+    ],
+   });
 }
 
-export const addBook = (input) => {
+export function getById(id) {
+  return Book.findById(id);
+}
+
+export function addBook(input) {
   const { title, author } = input;
 
-  const book = {
-    id: (books.length + 1).toString(),
+  const book = new Book({
     title,
     author,
-  }
+  });
 
-  books.push(book);
-
-  return book;
+  return book.save();
 }

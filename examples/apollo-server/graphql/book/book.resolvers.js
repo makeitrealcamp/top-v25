@@ -1,23 +1,33 @@
-import { allBooks, addBook, getById, getSingleBook } from './book.serivces.js';
+import { getAllBooks, addBook, getById, getSingleBook } from './book.serivces.js';
 
-const Query = {
-  allBooks,
-  singleBook: (parent, args) => {
-    return getSingleBook(...args);
+const query = {
+  allBooks: async (parent, args) => {
+    const books = await getAllBooks();
+    return books;
   },
-  getById: (_, args) => {
+  singleBook: async (parent, args) => {
+    const book = await getSingleBook(args);
+    return book;
+  },
+  getById: async (_, args) => {
     const { id } = args;
-    return getById(id);
+    const book = await getById(id);
+    return book;
   }
 }
 
-const Mutation = {
-  addBook: (_, { input }) => {
-    return addBook(input);
+const mutation = {
+  addBook: async(_, { input }, { currentUser }) => {
+    if (!currentUser) {
+      throw new Error('You are not authenticated');
+    }
+
+    const book = await addBook(input);
+    return book;
   }
 }
 
 export default {
-  Query,
-  Mutation,
+  query,
+  mutation,
 };
